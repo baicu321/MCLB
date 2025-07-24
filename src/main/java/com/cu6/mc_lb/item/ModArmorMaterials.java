@@ -12,8 +12,12 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    ZI_MIN("zi_min",26,new int[]{5,7,5,4},25,
-            SoundEvents.ARMOR_EQUIP_GOLD,1f,0f,()->Ingredient.of(ModBlocks.ZIMINLUCKYBLOCK.get()));
+    ZI_MIN("zi_min",999,new int[]{3,8,6,3},25,
+            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.ZIMINLUCKYBLOCK.get())),
+    YUSHAN("yushan",999,new int[]{3,8,6,3},25,
+    SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.ZIMINLUCKYBLOCK.get())),
+    MOON_BOOS("moon_boos",999,new int[]{3,8,6,3},25,
+            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.ZIMINLUCKYBLOCK.get()));
     private final String name;
     private final int durabiltyMultiplier;
     private final int[] protectionAmounts;

@@ -22,7 +22,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> LUCKYBLOCK = registerBlock("lucky_block",
             ()->new LuckyBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
     public static final RegistryObject<Block> ZIMINLUCKYBLOCK = registerBlock("zi_min_luckyblock",
-            ()->new ZiMinLuckyBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
+            ()->new ZiMinLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> YUSHANLUCKYBLOCK = registerBlock("yushan_luckyblock",
+            ()->new YuShanLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> MOONBOOSLUCKYBLOCK = registerBlock("moon_boos_luckyblock",
+            ()->new MoonBoosLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
 
 
 

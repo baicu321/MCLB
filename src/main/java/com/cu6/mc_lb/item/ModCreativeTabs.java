@@ -20,15 +20,26 @@ public class ModCreativeTabs {
             ()-> CreativeModeTab.builder().icon(()-> new ItemStack(Items.GOLD_INGOT))
                     .title(Component.translatable("creativetab.mclb_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModBlocks.LUCKYBLOCK.get());
+                        //zi_min
                         output.accept(ModBlocks.ZIMINLUCKYBLOCK.get());
                         output.accept(ModItems.ZI_MIN_HELMET.get());
                         output.accept(ModItems.ZI_MIN_CHESTPLATE.get());
                         output.accept(ModItems.ZI_MIN_LEGGINGS.get());
                         output.accept(ModItems.ZI_MIN_BOOTS.get());
-
-
-
+                        output.accept(ModItems.GOD_PICKAXE.get());
+                        output.accept(ModItems.STONE_NUGGET.get());
+                        //yushan
+                        output.accept(ModBlocks.YUSHANLUCKYBLOCK.get());
+                        output.accept(ModItems.YUSHAN_HELMET.get());
+                        output.accept(ModItems.YUSHAN_CHESTPLATE.get());
+                        output.accept(ModItems.YUSHAN_LEGGINGS.get());
+                        output.accept(ModItems.YUSHAN_BOOTS.get());
+                        //moonboos
+                        output.accept(ModBlocks.MOONBOOSLUCKYBLOCK.get());
+                        output.accept(ModItems.MOON_BOOS_HELMET.get());
+                        output.accept(ModItems.MOON_BOOS_CHESTPLATE.get());
+                        output.accept(ModItems.MOON_BOOS_LEGGINGS.get());
+                        output.accept(ModItems.MOON_BOOS_BOOTS.get());
                     })
 
 

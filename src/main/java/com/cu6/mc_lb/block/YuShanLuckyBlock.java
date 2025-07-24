@@ -1,8 +1,10 @@
 package com.cu6.mc_lb.block;
 
+import com.cu6.mc_lb.MCLB;
 import com.cu6.mc_lb.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -11,21 +13,29 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class ZiMinLuckyBlock extends LuckyBlock {
+import java.awt.*;
+
+public class YuShanLuckyBlock extends LuckyBlock {
 
     public static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
 
-    public ZiMinLuckyBlock(Properties pProperties) {
+    public YuShanLuckyBlock(Properties pProperties) {
         super(pProperties);
     }
     @Override
@@ -47,20 +57,19 @@ public class ZiMinLuckyBlock extends LuckyBlock {
             int luck = random.nextInt(4);
             switch (luck) {
                 case 0:
-                    spawnItem(serverLevel, pos, new ItemStack(ModItems.ZI_MIN_HELMET.get(), random.nextInt(1) + 1));
-                    spawnItem(serverLevel, pos, new ItemStack(ModItems.ZI_MIN_CHESTPLATE.get(), random.nextInt(1) + 1));
-                    spawnItem(serverLevel, pos, new ItemStack(ModItems.ZI_MIN_LEGGINGS.get(), random.nextInt(1) + 1));
-                    spawnItem(serverLevel, pos, new ItemStack(ModItems.ZI_MIN_BOOTS.get(), random.nextInt(1) + 1));
+                    spawnItem(serverLevel, pos, new ItemStack(ModItems.YUSHAN_HELMET.get(), random.nextInt(1) + 1));
+                    spawnItem(serverLevel, pos, new ItemStack(ModItems.YUSHAN_CHESTPLATE.get(), random.nextInt(1) + 1));
+                    spawnItem(serverLevel, pos, new ItemStack(ModItems.YUSHAN_LEGGINGS.get(), random.nextInt(1) + 1));
+                    spawnItem(serverLevel, pos, new ItemStack(ModItems.YUSHAN_BOOTS.get(), random.nextInt(1) + 1));
                     break;
                 case 1:
-                    spawnItem(serverLevel, pos, new ItemStack(ModItems.STONE_NUGGET.get(), random.nextInt(9) + 1));
+                    spawnItem(serverLevel, pos, new ItemStack(Items.BONE, random.nextInt(9) + 1));
                     break;
                 case 2:
-                    spawnEntity(serverLevel,pos,EntityType.CREEPER,2,6, Component.literal("这么强?"));
+                    spawnEntity(serverLevel,pos, EntityType.WOLF,1,6, Component.literal("歪歪"));
                     break;
                 case 3:
-                    spawnItem(serverLevel,pos,new ItemStack(ModItems.GOD_PICKAXE.get(), random.nextInt(1)+1));
-                    break;
+                    spawnFluid(serverLevel,pos, Fluids.FLOWING_LAVA,5);
             }
         }
         return InteractionResult.SUCCESS;
