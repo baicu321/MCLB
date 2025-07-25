@@ -3,6 +3,7 @@ package com.cu6.mc_lb;
 import com.cu6.mc_lb.block.ModBlocks;
 import com.cu6.mc_lb.item.ModCreativeTabs;
 import com.cu6.mc_lb.item.ModItems;
+import com.cu6.mc_lb.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,7 +32,7 @@ public class MCLB
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
-
+        ModVillagers.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);

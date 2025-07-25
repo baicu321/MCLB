@@ -55,6 +55,15 @@ public class ModItems {
             ()-> new ArmorItem(ModArmorMaterials.XIAOBEN,ArmorItem.Type.LEGGINGS,new Item.Properties()));
     public static final RegistryObject<Item> XIAOBEN_BOOTS = ITEMS.register("xiaoben_boots",
             ()-> new ArmorItem(ModArmorMaterials.XIAOBEN,ArmorItem.Type.BOOTS,new Item.Properties()));
+    //xiaotian悠然小天
+    public static final RegistryObject<Item> XIAOTIAN_HELMET = ITEMS.register("xiaotian_helmet",
+            ()-> new ArmorItem(ModArmorMaterials.XIAOTIAN,ArmorItem.Type.HELMET,new Item.Properties()));
+    public static final RegistryObject<Item> XIAOTIAN_CHESTPLATE = ITEMS.register("xiaotian_chestplate",
+            ()-> new ArmorItem(ModArmorMaterials.XIAOTIAN,ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+    public static final RegistryObject<Item> XIAOTIAN_LEGGINGS = ITEMS.register("xiaotian_leggings",
+            ()-> new ArmorItem(ModArmorMaterials.XIAOTIAN,ArmorItem.Type.LEGGINGS,new Item.Properties()));
+    public static final RegistryObject<Item> XIAOTIAN_BOOTS = ITEMS.register("xiaotian_boots",
+            ()-> new ArmorItem(ModArmorMaterials.XIAOTIAN,ArmorItem.Type.BOOTS,new Item.Properties()));
 
 
 

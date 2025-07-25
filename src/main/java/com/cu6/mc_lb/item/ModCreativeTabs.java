@@ -46,6 +46,12 @@ public class ModCreativeTabs {
                         output.accept(ModItems.XIAOBEN_CHESTPLATE.get());
                         output.accept(ModItems.XIAOBEN_LEGGINGS.get());
                         output.accept(ModItems.XIAOBEN_BOOTS.get());
+                        //xiaotian
+                        output.accept(ModBlocks.XIAOTIANLUCKYBLOCK.get());
+                        output.accept(ModItems.XIAOTIAN_HELMET.get());
+                        output.accept(ModItems.XIAOTIAN_CHESTPLATE.get());
+                        output.accept(ModItems.XIAOTIAN_LEGGINGS.get());
+                        output.accept(ModItems.XIAOTIAN_BOOTS.get());
                     })
 
 

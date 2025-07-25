@@ -29,6 +29,8 @@ public class ModBlocks {
             ()->new MoonBoosLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
     public static final RegistryObject<Block> XIAOBENLUCKYBLOCK = registerBlock("xiaoben_luckyblock",
             ()->new XiaoBenLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> XIAOTIANLUCKYBLOCK = registerBlock("xiaotian_luckyblock",
+            ()->new XiaoTianLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
 
 
 

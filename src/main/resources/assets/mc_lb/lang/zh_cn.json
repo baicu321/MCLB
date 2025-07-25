@@ -24,5 +24,11 @@
   "item.mc_lb.xiaoben_helmet": "小本的头",
   "item.mc_lb.xiaoben_chestplate": "小本的衣服",
   "item.mc_lb.xiaoben_leggings": "小本的短裤",
-  "item.mc_lb.xiaoben_boots": "§7小本的靴子"
+  "item.mc_lb.xiaoben_boots": "§7小本的靴子",
+  "entity.minecraft.villager.mc_lb.dj": "DJ",
+  "block.mc_lb.xiaotian_luckyblock": "悠然小天幸运方块",
+  "item.mc_lb.xiaotian_helmet": "悠然小天的头",
+  "item.mc_lb.xiaotian_chestplate": "悠然小天的衣服",
+  "item.mc_lb.xiaotian_leggings": "悠然小天的裤子",
+  "item.mc_lb.xiaotian_boots": "悠然小天的靴子"
 }

@@ -15,11 +15,13 @@ public enum ModArmorMaterials implements ArmorMaterial {
     ZI_MIN("zi_min",999,new int[]{3,8,6,3},25,
             SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.ZIMINLUCKYBLOCK.get())),
     YUSHAN("yushan",999,new int[]{3,8,6,3},25,
-    SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.ZIMINLUCKYBLOCK.get())),
+    SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.YUSHANLUCKYBLOCK.get())),
     MOON_BOOS("moon_boos",999,new int[]{3,8,6,3},25,
-            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.ZIMINLUCKYBLOCK.get())),
+            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.MOONBOOSLUCKYBLOCK.get())),
     XIAOBEN("xiaoben",999,new int[]{3,8,6,3},25,
-            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.ZIMINLUCKYBLOCK.get()));
+            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.XIAOBENLUCKYBLOCK.get())),
+    XIAOTIAN("xiaotian",999,new int[]{3,8,6,3},25,
+    SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.LUCKYBLOCK.get()));
     private final String name;
     private final int durabiltyMultiplier;
     private final int[] protectionAmounts;
