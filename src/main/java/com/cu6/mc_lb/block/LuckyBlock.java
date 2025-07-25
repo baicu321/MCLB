@@ -11,6 +11,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobSpawnType;
@@ -166,6 +167,28 @@ public class LuckyBlock extends Block {
 
 
             level.playSound(null, pos, SoundEvents.STONE_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
+        }
+    }
+    // 给予玩家状态效果
+    public void applyEffectToPlayer(ServerPlayer player, MobEffectInstance effectInstance) {
+        if (player.hasEffect(effectInstance.getEffect())) {
+            MobEffectInstance existingEffect = player.getEffect(effectInstance.getEffect());
+            if (existingEffect != null) {
+                int newAmplifier = Math.max(existingEffect.getAmplifier(), effectInstance.getAmplifier());
+                int newDuration = existingEffect.getDuration() + effectInstance.getDuration();
+                MobEffectInstance newEffect = new MobEffectInstance(
+                        effectInstance.getEffect(),
+                        newDuration,
+                        newAmplifier,
+                        effectInstance.isAmbient(),
+                        effectInstance.isVisible(),
+                        effectInstance.showIcon()
+                );
+
+                player.addEffect(newEffect);
+            }
+        } else {
+            player.addEffect(effectInstance);
         }
     }
 }

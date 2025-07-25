@@ -40,6 +40,12 @@ public class ModCreativeTabs {
                         output.accept(ModItems.MOON_BOOS_CHESTPLATE.get());
                         output.accept(ModItems.MOON_BOOS_LEGGINGS.get());
                         output.accept(ModItems.MOON_BOOS_BOOTS.get());
+                        //xiaoben
+                        output.accept(ModBlocks.XIAOBENLUCKYBLOCK.get());
+                        output.accept(ModItems.XIAOBEN_HELMET.get());
+                        output.accept(ModItems.XIAOBEN_CHESTPLATE.get());
+                        output.accept(ModItems.XIAOBEN_LEGGINGS.get());
+                        output.accept(ModItems.XIAOBEN_BOOTS.get());
                     })
 
 

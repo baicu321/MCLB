@@ -46,6 +46,18 @@ public class ModItems {
             ()-> new ArmorItem(ModArmorMaterials.MOON_BOOS,ArmorItem.Type.LEGGINGS,new Item.Properties()));
     public static final RegistryObject<Item> MOON_BOOS_BOOTS = ITEMS.register("moon_boos_boots",
             ()-> new ArmorItem(ModArmorMaterials.MOON_BOOS,ArmorItem.Type.BOOTS,new Item.Properties()));
+    //xiaoben小本
+    public static final RegistryObject<Item> XIAOBEN_HELMET = ITEMS.register("xiaoben_helmet",
+            ()-> new ArmorItem(ModArmorMaterials.XIAOBEN,ArmorItem.Type.HELMET,new Item.Properties()));
+    public static final RegistryObject<Item> XIAOBEN_CHESTPLATE = ITEMS.register("xiaoben_chestplate",
+            ()-> new ArmorItem(ModArmorMaterials.XIAOBEN,ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+    public static final RegistryObject<Item> XIAOBEN_LEGGINGS = ITEMS.register("xiaoben_leggings",
+            ()-> new ArmorItem(ModArmorMaterials.XIAOBEN,ArmorItem.Type.LEGGINGS,new Item.Properties()));
+    public static final RegistryObject<Item> XIAOBEN_BOOTS = ITEMS.register("xiaoben_boots",
+            ()-> new ArmorItem(ModArmorMaterials.XIAOBEN,ArmorItem.Type.BOOTS,new Item.Properties()));
+
+
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

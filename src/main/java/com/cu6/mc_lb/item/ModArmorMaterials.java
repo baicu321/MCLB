@@ -17,6 +17,8 @@ public enum ModArmorMaterials implements ArmorMaterial {
     YUSHAN("yushan",999,new int[]{3,8,6,3},25,
     SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.ZIMINLUCKYBLOCK.get())),
     MOON_BOOS("moon_boos",999,new int[]{3,8,6,3},25,
+            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.ZIMINLUCKYBLOCK.get())),
+    XIAOBEN("xiaoben",999,new int[]{3,8,6,3},25,
             SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.ZIMINLUCKYBLOCK.get()));
     private final String name;
     private final int durabiltyMultiplier;

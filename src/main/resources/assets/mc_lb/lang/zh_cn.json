@@ -19,5 +19,10 @@
   "item.mc_lb.moon_boos_helmet": "明月庄主的头",
   "item.mc_lb.moon_boos_chestplate": "明月庄主的背心",
   "item.mc_lb.moon_boos_leggings": "明月庄主的短裤",
-  "item.mc_lb.moon_boos_boots": "§7明月庄主的靴子"
+  "item.mc_lb.moon_boos_boots": "§7明月庄主的靴子",
+  "block.mc_lb.xiaoben_luckyblock": "小本幸运方块",
+  "item.mc_lb.xiaoben_helmet": "小本的头",
+  "item.mc_lb.xiaoben_chestplate": "小本的衣服",
+  "item.mc_lb.xiaoben_leggings": "小本的短裤",
+  "item.mc_lb.xiaoben_boots": "§7小本的靴子"
 }
