@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "minecraft:grass"
+    },
+    "B": {
+      "item": "minecraft:dirt"
+    },
+    "C": {
+      "item": "minecraft:dropper"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "BCB",
+    "BBB"
+  ],
+  "result": {
+    "item": "mc_lb:mc_luckyblock"
+  },
+  "show_notification": true
+}

@@ -1,6 +1,7 @@
 package com.cu6.mc_lb.block;
 
 import com.cu6.mc_lb.MCLB;
+import com.cu6.mc_lb.block.luckyblock.*;
 import com.cu6.mc_lb.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -21,6 +22,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> LUCKYBLOCK = registerBlock("lucky_block",
             ()->new LuckyBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
+    public static final RegistryObject<Block> MC_LUCKYBLOCK = registerBlock("mc_luckyblock",
+            ()->new MCLuckyBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
     public static final RegistryObject<Block> ZIMINLUCKYBLOCK = registerBlock("zi_min_luckyblock",
             ()->new ZiMinLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
     public static final RegistryObject<Block> YUSHANLUCKYBLOCK = registerBlock("yushan_luckyblock",
@@ -31,6 +34,12 @@ public class ModBlocks {
             ()->new XiaoBenLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
     public static final RegistryObject<Block> XIAOTIANLUCKYBLOCK = registerBlock("xiaotian_luckyblock",
             ()->new XiaoTianLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> TIANQILUCKYBLOCK = registerBlock("tianqi_luckyblock",
+            ()->new TianQILuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> NORLUCKYBLOCK = registerBlock("nor_luckyblock",
+            ()->new NorLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> DIGELUCKYBLOCK = registerBlock("dige_luckyblock",
+            ()->new DiGeLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
 
 
 

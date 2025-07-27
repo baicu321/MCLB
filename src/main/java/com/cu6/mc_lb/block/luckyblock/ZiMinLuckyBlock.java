@@ -1,5 +1,6 @@
-package com.cu6.mc_lb.block;
+package com.cu6.mc_lb.block.luckyblock;
 
+import com.cu6.mc_lb.block.LuckyBlock;
 import com.cu6.mc_lb.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

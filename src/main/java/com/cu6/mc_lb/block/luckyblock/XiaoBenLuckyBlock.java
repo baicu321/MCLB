@@ -1,6 +1,7 @@
-package com.cu6.mc_lb.block;
+package com.cu6.mc_lb.block.luckyblock;
 
 import com.cu6.mc_lb.MCLB;
+import com.cu6.mc_lb.block.LuckyBlock;
 import com.cu6.mc_lb.item.ModItems;
 import com.cu6.mc_lb.util.DelayedMessageSystem;
 import com.cu6.mc_lb.util.LoveParticleHandler;
@@ -20,7 +21,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -31,7 +31,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class XiaoBenLuckyBlock extends LuckyBlock{
+public class XiaoBenLuckyBlock extends LuckyBlock {
 
     public static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
 
@@ -54,7 +54,7 @@ public class XiaoBenLuckyBlock extends LuckyBlock{
             level.destroyBlock(pos, false);
             level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT,
                     SoundSource.BLOCKS, 1.0F, 1.0F);
-            int luck = random.nextInt(3);
+            int luck = random.nextInt(4);
             switch (luck) {
                 case 0:
                     placeStructure(serverLevel,pos,new ResourceLocation(MCLB.MOD_ID,"xiaoben_end"), Rotation.getRandom(random));
@@ -91,6 +91,10 @@ public class XiaoBenLuckyBlock extends LuckyBlock{
                     break;
                 case 2:
                     spawnEntity(serverLevel,pos,EntityType.ZOMBIE,1,5,null);
+                    break;
+                case 3:
+                    spawnItem(serverLevel, pos, new ItemStack(ModItems.CHERRY_RADISH.get(), random.nextInt(2) + 1));
+                    break;
             }
         }
         return InteractionResult.SUCCESS;

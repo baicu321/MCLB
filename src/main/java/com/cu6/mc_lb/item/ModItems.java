@@ -1,11 +1,12 @@
 package com.cu6.mc_lb.item;
 
 import com.cu6.mc_lb.MCLB;
+import com.cu6.mc_lb.item.tools.CatSword;
 import com.cu6.mc_lb.item.tools.GodPickAxe;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.TieredItem;
-import net.minecraft.world.item.Tiers;
+import com.cu6.mc_lb.item.tools.MissileItem;
+import com.cu6.mc_lb.item.tools.NoOffHandBow;
+import com.cu6.mc_lb.sound.ModSounds;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -55,6 +56,8 @@ public class ModItems {
             ()-> new ArmorItem(ModArmorMaterials.XIAOBEN,ArmorItem.Type.LEGGINGS,new Item.Properties()));
     public static final RegistryObject<Item> XIAOBEN_BOOTS = ITEMS.register("xiaoben_boots",
             ()-> new ArmorItem(ModArmorMaterials.XIAOBEN,ArmorItem.Type.BOOTS,new Item.Properties()));
+    public static final RegistryObject<Item> CHERRY_RADISH = ITEMS.register("cherry_radish",
+            ()-> new Item(new Item.Properties().food(ModFoods.CHERRY_RADISH)));
     //xiaotian悠然小天
     public static final RegistryObject<Item> XIAOTIAN_HELMET = ITEMS.register("xiaotian_helmet",
             ()-> new ArmorItem(ModArmorMaterials.XIAOTIAN,ArmorItem.Type.HELMET,new Item.Properties()));
@@ -64,6 +67,45 @@ public class ModItems {
             ()-> new ArmorItem(ModArmorMaterials.XIAOTIAN,ArmorItem.Type.LEGGINGS,new Item.Properties()));
     public static final RegistryObject<Item> XIAOTIAN_BOOTS = ITEMS.register("xiaotian_boots",
             ()-> new ArmorItem(ModArmorMaterials.XIAOTIAN,ArmorItem.Type.BOOTS,new Item.Properties()));
+    public static final RegistryObject<Item> MISSILE = ITEMS.register("missile",
+            ()-> new MissileItem(new Item.Properties()));
+    //tianqi天骐
+    public static final RegistryObject<Item> TIANQI_HELMET = ITEMS.register("tianqi_helmet",
+            ()-> new ArmorItem(ModArmorMaterials.TIANQI,ArmorItem.Type.HELMET,new Item.Properties()));
+    public static final RegistryObject<Item> TIANQI_CHESTPLATE = ITEMS.register("tianqi_chestplate",
+            ()-> new ArmorItem(ModArmorMaterials.TIANQI,ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+    public static final RegistryObject<Item> TIANQI_LEGGINGS = ITEMS.register("tianqi_leggings",
+            ()-> new ArmorItem(ModArmorMaterials.TIANQI,ArmorItem.Type.LEGGINGS,new Item.Properties()));
+    public static final RegistryObject<Item> TIANQI_BOOTS = ITEMS.register("tianqi_boots",
+            ()-> new ArmorItem(ModArmorMaterials.TIANQI,ArmorItem.Type.BOOTS,new Item.Properties()));
+    public static final RegistryObject<Item> MUSIC_DISC_DJ = ITEMS.register("music_disc_dj",
+            ()-> new RecordItem(6, ModSounds.IF_I_WERE_DJ,new Item.Properties().stacksTo(1),5260));
+    //nor
+    public static final RegistryObject<Item> NOR_HELMET = ITEMS.register("nor_helmet",
+            ()-> new ArmorItem(ModArmorMaterials.NOR,ArmorItem.Type.HELMET,new Item.Properties()));
+    public static final RegistryObject<Item> NOR_CHESTPLATE = ITEMS.register("nor_chestplate",
+            ()-> new ArmorItem(ModArmorMaterials.NOR,ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+    public static final RegistryObject<Item> NOR_LEGGINGS = ITEMS.register("nor_leggings",
+            ()-> new ArmorItem(ModArmorMaterials.NOR,ArmorItem.Type.LEGGINGS,new Item.Properties()));
+    public static final RegistryObject<Item> NOR_BOOTS = ITEMS.register("nor_boots",
+            ()-> new ArmorItem(ModArmorMaterials.NOR,ArmorItem.Type.BOOTS,new Item.Properties()));
+    public static final RegistryObject<Item> CHUIBING = ITEMS.register("chuibing",
+            ()-> new Item(new Item.Properties().food(ModFoods.CHUIBING)));
+    public static final RegistryObject<Item> NO_OFFHAND_BOW = ITEMS.register("no_offhand_bow",
+            () -> new NoOffHandBow(new Item.Properties().durability(384)));
+    public static final RegistryObject<Item> CAT_SWORD = ITEMS.register("cat_sword",
+            () -> new CatSword(Tiers.DIAMOND, 3,-2.4F,new Item.Properties().durability(1561)));
+    //dige
+    public static final RegistryObject<Item> DIGE_HELMET = ITEMS.register("dige_helmet",
+            ()-> new ArmorItem(ModArmorMaterials.DIGE,ArmorItem.Type.HELMET,new Item.Properties()));
+    public static final RegistryObject<Item> DIGE_CHESTPLATE = ITEMS.register("dige_chestplate",
+            ()-> new ArmorItem(ModArmorMaterials.DIGE,ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+    public static final RegistryObject<Item> DIGE_LEGGINGS = ITEMS.register("dige_leggings",
+            ()-> new ArmorItem(ModArmorMaterials.DIGE,ArmorItem.Type.LEGGINGS,new Item.Properties()));
+    public static final RegistryObject<Item> DIGE_BOOTS = ITEMS.register("dige_boots",
+            ()-> new ArmorItem(ModArmorMaterials.DIGE,ArmorItem.Type.BOOTS,new Item.Properties()));
+
+
 
 
 

@@ -21,7 +21,13 @@ public enum ModArmorMaterials implements ArmorMaterial {
     XIAOBEN("xiaoben",999,new int[]{3,8,6,3},25,
             SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.XIAOBENLUCKYBLOCK.get())),
     XIAOTIAN("xiaotian",999,new int[]{3,8,6,3},25,
-    SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.LUCKYBLOCK.get()));
+    SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.XIAOTIANLUCKYBLOCK.get())),
+    TIANQI("tianqi",999,new int[]{3,8,6,3},25,
+            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.TIANQILUCKYBLOCK.get())),
+    NOR("nor",999,new int[]{3,8,6,3},25,
+            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.NORLUCKYBLOCK.get())),
+    DIGE("dige",999,new int[]{3,8,6,3},25,
+            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.LUCKYBLOCK.get()));
     private final String name;
     private final int durabiltyMultiplier;
     private final int[] protectionAmounts;

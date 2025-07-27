@@ -1,7 +1,7 @@
-package com.cu6.mc_lb.block;
+package com.cu6.mc_lb.block.luckyblock;
 
 import com.cu6.mc_lb.MCLB;
-import com.cu6.mc_lb.item.ModItems;
+import com.cu6.mc_lb.block.LuckyBlock;
 import net.minecraft.core.BlockPos;
 
 import net.minecraft.resources.ResourceLocation;
@@ -27,7 +27,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class MoonBoosLuckyBlock extends LuckyBlock{
+public class MoonBoosLuckyBlock extends LuckyBlock {
 
     public static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     public MoonBoosLuckyBlock(Properties pProperties) {

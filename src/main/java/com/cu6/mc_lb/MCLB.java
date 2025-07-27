@@ -3,6 +3,7 @@ package com.cu6.mc_lb;
 import com.cu6.mc_lb.block.ModBlocks;
 import com.cu6.mc_lb.item.ModCreativeTabs;
 import com.cu6.mc_lb.item.ModItems;
+import com.cu6.mc_lb.sound.ModSounds;
 import com.cu6.mc_lb.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
@@ -28,11 +29,12 @@ public class MCLB
     public MCLB()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
         ModVillagers.register(modEventBus);
+        ModSounds.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -61,7 +63,6 @@ public class MCLB
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            
         }
     }
 }

@@ -17,9 +17,10 @@ public class ModCreativeTabs {
 
 
     public static final RegistryObject<CreativeModeTab> MCLB_TAB = CREATIVE_MODE_TABS.register("mclb.tab",
-            ()-> CreativeModeTab.builder().icon(()-> new ItemStack(Items.GOLD_INGOT))
+            ()-> CreativeModeTab.builder().icon(()-> new ItemStack(ModBlocks.MC_LUCKYBLOCK.get()))
                     .title(Component.translatable("creativetab.mclb_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.MC_LUCKYBLOCK.get());
                         //zi_min
                         output.accept(ModBlocks.ZIMINLUCKYBLOCK.get());
                         output.accept(ModItems.ZI_MIN_HELMET.get());
@@ -46,12 +47,36 @@ public class ModCreativeTabs {
                         output.accept(ModItems.XIAOBEN_CHESTPLATE.get());
                         output.accept(ModItems.XIAOBEN_LEGGINGS.get());
                         output.accept(ModItems.XIAOBEN_BOOTS.get());
+                        output.accept(ModItems.CHERRY_RADISH.get());
                         //xiaotian
                         output.accept(ModBlocks.XIAOTIANLUCKYBLOCK.get());
                         output.accept(ModItems.XIAOTIAN_HELMET.get());
                         output.accept(ModItems.XIAOTIAN_CHESTPLATE.get());
                         output.accept(ModItems.XIAOTIAN_LEGGINGS.get());
                         output.accept(ModItems.XIAOTIAN_BOOTS.get());
+                        output.accept(ModItems.MISSILE.get());
+                        //tianqi
+                        output.accept(ModBlocks.TIANQILUCKYBLOCK.get());
+                        output.accept(ModItems.TIANQI_HELMET.get());
+                        output.accept(ModItems.TIANQI_CHESTPLATE.get());
+                        output.accept(ModItems.TIANQI_LEGGINGS.get());
+                        output.accept(ModItems.TIANQI_BOOTS.get());
+                        output.accept(ModItems.MUSIC_DISC_DJ.get());
+                        //nor
+                        output.accept(ModBlocks.NORLUCKYBLOCK.get());
+                        output.accept(ModItems.NOR_HELMET.get());
+                        output.accept(ModItems.NOR_CHESTPLATE.get());
+                        output.accept(ModItems.NOR_LEGGINGS.get());
+                        output.accept(ModItems.NOR_BOOTS.get());
+                        output.accept(ModItems.NO_OFFHAND_BOW.get());
+                        output.accept(ModItems.CHUIBING.get());
+                        output.accept(ModItems.CAT_SWORD.get());
+                        //dige
+                        output.accept(ModBlocks.DIGELUCKYBLOCK.get());
+                        output.accept(ModItems.DIGE_HELMET.get());
+                        output.accept(ModItems.DIGE_CHESTPLATE.get());
+                        output.accept(ModItems.DIGE_LEGGINGS.get());
+                        output.accept(ModItems.DIGE_BOOTS.get());
                     })
 
 

@@ -1,0 +1,10 @@
+{
+  "if_i_were_dj":{
+    "sounds": [
+      {
+        "name": "mc_lb:if_i_were_dj",
+        "stream": true
+      }
+    ]
+  }
+}
