@@ -21,6 +21,7 @@ public class ModCreativeTabs {
                     .title(Component.translatable("creativetab.mclb_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.MC_LUCKYBLOCK.get());
+                        output.accept(ModItems.FLOWER_DANCE.get());
                         //zi_min
                         output.accept(ModBlocks.ZIMINLUCKYBLOCK.get());
                         output.accept(ModItems.ZI_MIN_HELMET.get());
@@ -28,6 +29,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.ZI_MIN_LEGGINGS.get());
                         output.accept(ModItems.ZI_MIN_BOOTS.get());
                         output.accept(ModItems.GOD_PICKAXE.get());
+                        output.accept(ModItems.HIT_MAYI.get());
                         output.accept(ModItems.STONE_NUGGET.get());
                         //yushan
                         output.accept(ModBlocks.YUSHANLUCKYBLOCK.get());
@@ -77,6 +79,13 @@ public class ModCreativeTabs {
                         output.accept(ModItems.DIGE_CHESTPLATE.get());
                         output.accept(ModItems.DIGE_LEGGINGS.get());
                         output.accept(ModItems.DIGE_BOOTS.get());
+                        //uncle_red
+                        output.accept(ModBlocks.UNCLEREDLUCKYBLOCK.get());
+                        output.accept(ModItems.UNCLE_RED_HELMET.get());
+                        output.accept(ModItems.UNCLE_RED_CHESTPLATE.get());
+                        output.accept(ModItems.UNCLE_RED_LEGGINGS.get());
+                        output.accept(ModItems.UNCLE_RED_BOOTS.get());
+                        output.accept(ModItems.MASTER_SWORD.get());
                     })
 
 

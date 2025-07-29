@@ -45,7 +45,7 @@ public class ZiMinLuckyBlock extends LuckyBlock {
             level.destroyBlock(pos, false);
             level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT,
                     SoundSource.BLOCKS, 1.0F, 1.0F);
-            int luck = random.nextInt(4);
+            int luck = random.nextInt(5);
             switch (luck) {
                 case 0:
                     spawnItem(serverLevel, pos, new ItemStack(ModItems.ZI_MIN_HELMET.get(), random.nextInt(1) + 1));
@@ -57,10 +57,14 @@ public class ZiMinLuckyBlock extends LuckyBlock {
                     spawnItem(serverLevel, pos, new ItemStack(ModItems.STONE_NUGGET.get(), random.nextInt(9) + 1));
                     break;
                 case 2:
+                    playCustomSound(serverPlayer, "mayi", SoundSource.PLAYERS, 1.0F, 1.0F);
                     spawnEntity(serverLevel,pos,EntityType.CREEPER,2,6, Component.literal("这么强?"));
                     break;
                 case 3:
                     spawnItem(serverLevel,pos,new ItemStack(ModItems.GOD_PICKAXE.get(), random.nextInt(1)+1));
+                    break;
+                case 4:
+                    spawnItem(serverLevel,pos,new ItemStack(ModItems.HIT_MAYI.get(), random.nextInt(1)+1));
                     break;
             }
         }

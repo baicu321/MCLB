@@ -1,6 +1,8 @@
 {
   "creativetab.mclb_tab": "幸运方块:MC创作者",
   "block.mc_lb.mc_luckyblock": "创作者幸运方块",
+  "item.mc_lb.flower_dance": "Flower Dance花之舞",
+  "item.mc_lb.flower_dance.desc": "FlowerDance花之舞 - PianoPanda",
   "item.mc_lb.zi_min_helmet": "籽岷的头",
   "item.mc_lb.zi_min_chestplate": "籽岷的衣服",
   "item.mc_lb.zi_min_leggings": "籽岷的裤子",
@@ -8,7 +10,10 @@
   "block.mc_lb.zi_min_luckyblock": "籽岷幸运方块",
   "item.mc_lb.god_pickaxe": "§c神§9镐",
   "item.mc_lb.stone_nugget": "石粒",
+  "item.mc_lb.hit_mayi": "蚂蚁毁灭拳",
   "tooltip.mc_lb.god_pickaxe1": "§7因为着急,所以属性没点在耐久上",
+  "tooltip.mc_lb.hitmayi": "§c让§d你§e获§b得§a最§9强§e的§b属§c性",
+  "tooltip.mc_lb.hitmayi1": "§7也许生存模式下使用会有更强的效果",
   "block.mc_lb.yushan_luckyblock": "与山幸运方块",
   "item.mc_lb.yushan_helmet": "与山的头",
   "item.mc_lb.yushan_chestplate": "与山的衣服",
@@ -55,5 +60,12 @@
   "item.mc_lb.dige_helmet": "迪哥的头",
   "item.mc_lb.dige_chestplate": "迪哥的衣服",
   "item.mc_lb.dige_leggings": "迪哥的裤子",
-  "item.mc_lb.dige_boots": "迪哥的靴子"
+  "item.mc_lb.dige_boots": "迪哥的靴子",
+  "block.mc_lb.uncle_red_luckyblock": "红叔幸运方块",
+  "item.mc_lb.uncle_red_helmet": "红叔的头",
+  "item.mc_lb.uncle_red_chestplate": "红叔的睡衣",
+  "item.mc_lb.uncle_red_leggings": "红叔的睡裤",
+  "item.mc_lb.uncle_red_boots": "红叔的袜子",
+  "item.mc_lb.master_sword": "§c宗师强者剑",
+  "tooltip.mc_lb.mastersword": "§7看起来像是星辰之怒的兄弟"
 }

@@ -27,6 +27,8 @@ public enum ModArmorMaterials implements ArmorMaterial {
     NOR("nor",999,new int[]{3,8,6,3},25,
             SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.NORLUCKYBLOCK.get())),
     DIGE("dige",999,new int[]{3,8,6,3},25,
+            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.DIGELUCKYBLOCK.get())),
+    UNCLE_RED("uncle_red",999,new int[]{3,8,6,3},25,
             SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.LUCKYBLOCK.get()));
     private final String name;
     private final int durabiltyMultiplier;

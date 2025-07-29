@@ -14,12 +14,16 @@ public class ModSounds {
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, MCLB.MOD_ID);
 
     public static final RegistryObject<SoundEvent> IF_I_WERE_DJ = regiterSoundEvents("if_i_were_dj");
+    public static final RegistryObject<SoundEvent> FLOWER_DANCE = regiterSoundEvents("flower_dance");
+    public static final RegistryObject<SoundEvent> MAYI = regiterSoundEvents("mayi");
+    public static final RegistryObject<SoundEvent> FRIEND = regiterSoundEvents("friend");
+    public static final RegistryObject<SoundEvent> HEADSHOOT = regiterSoundEvents("headshoot");
+
+
 
     private static RegistryObject<SoundEvent> regiterSoundEvents(String name) {
         return SOUND_EVENTS.register(name,()->SoundEvent.createVariableRangeEvent(new ResourceLocation(MCLB.MOD_ID,name)));
     }
-
-
     public static void register(IEventBus eventBus){
         SOUND_EVENTS.register(eventBus);
     }

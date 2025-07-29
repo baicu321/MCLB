@@ -1,10 +1,12 @@
 package com.cu6.mc_lb.block;
 
+import com.cu6.mc_lb.MCLB;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
@@ -32,6 +34,7 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.registries.ForgeRegistries;
 
 //这个类是示例幸运方块实现
 public class LuckyBlock extends Block {
@@ -184,6 +187,21 @@ public class LuckyBlock extends Block {
             }
         } else {
             player.addEffect(effectInstance);
+        }
+    }
+    //播放音频
+    public static void playSound(ServerPlayer player, SoundEvent soundEvent, SoundSource category, float volume, float pitch) {
+        if (player != null && player.level() instanceof ServerLevel serverLevel) {
+            serverLevel.playSound(null, player.blockPosition(), soundEvent, category, volume, pitch);
+        }
+    }
+
+    public static void playCustomSound(ServerPlayer player, String soundName, SoundSource category, float volume, float pitch) {
+        ResourceLocation soundLocation = new ResourceLocation(MCLB.MOD_ID, soundName);
+        SoundEvent soundEvent = ForgeRegistries.SOUND_EVENTS.getValue(soundLocation);
+
+        if (soundEvent != null) {
+            playSound(player, soundEvent, category, volume, pitch);
         }
     }
 }

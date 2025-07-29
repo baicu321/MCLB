@@ -1,10 +1,7 @@
 package com.cu6.mc_lb.item;
 
 import com.cu6.mc_lb.MCLB;
-import com.cu6.mc_lb.item.tools.CatSword;
-import com.cu6.mc_lb.item.tools.GodPickAxe;
-import com.cu6.mc_lb.item.tools.MissileItem;
-import com.cu6.mc_lb.item.tools.NoOffHandBow;
+import com.cu6.mc_lb.item.tools.*;
 import com.cu6.mc_lb.sound.ModSounds;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -16,6 +13,9 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MCLB.MOD_ID);
+
+    public static final RegistryObject<Item> FLOWER_DANCE = ITEMS.register("flower_dance",
+            ()-> new RecordItem(6, ModSounds.FLOWER_DANCE,new Item.Properties().stacksTo(1),3700));
 //zi_min籽岷
         public static final RegistryObject<Item> ZI_MIN_HELMET = ITEMS.register("zi_min_helmet",
         ()-> new ArmorItem(ModArmorMaterials.ZI_MIN,ArmorItem.Type.HELMET,new Item.Properties()));
@@ -29,6 +29,8 @@ public class ModItems {
             ()-> new Item(new Item.Properties()));
         public static final RegistryObject<Item> GOD_PICKAXE = ITEMS.register("god_pickaxe",
                 ()-> new GodPickAxe(Tiers.DIAMOND,16,-2.8F,new Item.Properties().durability(1)));
+        public static final RegistryObject<Item> HIT_MAYI = ITEMS.register("hit_mayi",
+                ()->new HitMayi(new Item.Properties()));
 //yushan与山
         public static final RegistryObject<Item> YUSHAN_HELMET = ITEMS.register("yushan_helmet",
         ()-> new ArmorItem(ModArmorMaterials.YUSHAN,ArmorItem.Type.HELMET,new Item.Properties()));
@@ -104,7 +106,17 @@ public class ModItems {
             ()-> new ArmorItem(ModArmorMaterials.DIGE,ArmorItem.Type.LEGGINGS,new Item.Properties()));
     public static final RegistryObject<Item> DIGE_BOOTS = ITEMS.register("dige_boots",
             ()-> new ArmorItem(ModArmorMaterials.DIGE,ArmorItem.Type.BOOTS,new Item.Properties()));
-
+    //uncle_red
+    public static final RegistryObject<Item> UNCLE_RED_HELMET = ITEMS.register("uncle_red_helmet",
+            ()-> new ArmorItem(ModArmorMaterials.UNCLE_RED,ArmorItem.Type.HELMET,new Item.Properties()));
+    public static final RegistryObject<Item> UNCLE_RED_CHESTPLATE = ITEMS.register("uncle_red_chestplate",
+            ()-> new ArmorItem(ModArmorMaterials.UNCLE_RED,ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+    public static final RegistryObject<Item> UNCLE_RED_LEGGINGS = ITEMS.register("uncle_red_leggings",
+            ()-> new ArmorItem(ModArmorMaterials.UNCLE_RED,ArmorItem.Type.LEGGINGS,new Item.Properties()));
+    public static final RegistryObject<Item> UNCLE_RED_BOOTS = ITEMS.register("uncle_red_boots",
+            ()-> new ArmorItem(ModArmorMaterials.UNCLE_RED,ArmorItem.Type.BOOTS,new Item.Properties()));
+    public static final RegistryObject<Item> MASTER_SWORD = ITEMS.register("master_sword",
+            ()-> new MasterSword(Tiers.NETHERITE,5,-2.2F,new Item.Properties().durability(2000)));
 
 
 

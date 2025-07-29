@@ -6,5 +6,31 @@
         "stream": true
       }
     ]
+  },
+  "flower_dance":{
+    "sounds": [
+      {
+        "name": "mc_lb:flower_dance",
+        "stream": true
+      }
+    ]
+  },
+  "mayi": {
+    "subtitles": "sounds.mc_lb.mayi",
+    "sounds":[
+      "mc_lb:mayi"
+    ]
+  },
+  "friend": {
+    "subtitles": "sounds.mc_lb.friend",
+    "sounds":[
+      "mc_lb:friend"
+    ]
+  },
+  "headshoot": {
+    "subtitles": "sounds.mc_lb.headshoot",
+    "sounds":[
+      "mc_lb:headshoot"
+    ]
   }
 }
