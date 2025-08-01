@@ -43,6 +43,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.MOON_BOOS_CHESTPLATE.get());
                         output.accept(ModItems.MOON_BOOS_LEGGINGS.get());
                         output.accept(ModItems.MOON_BOOS_BOOTS.get());
+                        output.accept(ModItems.BOOS_SWORD.get());
                         //xiaoben
                         output.accept(ModBlocks.XIAOBENLUCKYBLOCK.get());
                         output.accept(ModItems.XIAOBEN_HELMET.get());
@@ -86,6 +87,18 @@ public class ModCreativeTabs {
                         output.accept(ModItems.UNCLE_RED_LEGGINGS.get());
                         output.accept(ModItems.UNCLE_RED_BOOTS.get());
                         output.accept(ModItems.MASTER_SWORD.get());
+                        //wuge
+                        output.accept(ModBlocks.WUGELUCKYBLOCK.get());
+                        output.accept(ModItems.WUGE_HELMET.get());
+                        output.accept(ModItems.WUGE_CHESTPLATE.get());
+                        output.accept(ModItems.WUGE_LEGGINGS.get());
+                        output.accept(ModItems.WUGE_BOOTS.get());
+                        //dachengzi
+                        output.accept(ModBlocks.DACHENGZILUCKYBLOCK.get());
+                        output.accept(ModItems.DACHENGZI_HELMET.get());
+                        output.accept(ModItems.DACHENGZI_CHESTPLATE.get());
+                        output.accept(ModItems.DACHENGZI_LEGGINGS.get());
+                        output.accept(ModItems.DACHENGZI_BOOTS.get());
                     })
 
 

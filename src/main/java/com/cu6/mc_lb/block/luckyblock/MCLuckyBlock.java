@@ -21,13 +21,8 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class MCLuckyBlock extends LuckyBlock {
-    public static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     public MCLuckyBlock(Properties pProperties) {
         super(pProperties);
-    }
-    @Override
-    public VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context) {
-        return SHAPE;
     }
 
     @Override
@@ -40,7 +35,7 @@ public class MCLuckyBlock extends LuckyBlock {
             level.destroyBlock(pos, false);
             level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT,
                     SoundSource.BLOCKS, 1.0F, 1.0F);
-            int luck = random.nextInt(9);
+            int luck = random.nextInt(11);
             switch (luck) {
                 case 0:
                     spawnItem(serverLevel, pos, new ItemStack(ModBlocks.ZIMINLUCKYBLOCK.get(), random.nextInt(1) + 1));
@@ -68,6 +63,12 @@ public class MCLuckyBlock extends LuckyBlock {
                     break;
                 case 8:
                     spawnItem(serverLevel, pos, new ItemStack(ModBlocks.UNCLEREDLUCKYBLOCK.get(), random.nextInt(1) + 1));
+                    break;
+                case 9:
+                    spawnItem(serverLevel, pos, new ItemStack(ModBlocks.DACHENGZILUCKYBLOCK.get(), random.nextInt(1) + 1));
+                    break;
+                case 10:
+                    spawnItem(serverLevel, pos, new ItemStack(ModBlocks.WUGELUCKYBLOCK.get(), random.nextInt(1) + 1));
                     break;
             }
         }

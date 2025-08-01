@@ -33,14 +33,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import java.util.Objects;
 
 public class NorLuckyBlock extends LuckyBlock {
-    public static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
-
     public NorLuckyBlock(Properties pProperties) {
         super(pProperties);
-    }
-    @Override
-    public VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context) {
-        return SHAPE;
     }
 
     @Override

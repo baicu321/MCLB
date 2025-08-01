@@ -24,6 +24,7 @@
   "item.mc_lb.moon_boos_chestplate": "明月庄主的背心",
   "item.mc_lb.moon_boos_leggings": "明月庄主的短裤",
   "item.mc_lb.moon_boos_boots": "§7明月庄主的靴子",
+  "item.mc_lb.boos_sword": "庄主之剑",
   "block.mc_lb.xiaoben_luckyblock": "小本幸运方块",
   "item.mc_lb.xiaoben_helmet": "小本的头",
   "item.mc_lb.xiaoben_chestplate": "小本的衣服",
@@ -67,5 +68,16 @@
   "item.mc_lb.uncle_red_leggings": "红叔的睡裤",
   "item.mc_lb.uncle_red_boots": "红叔的袜子",
   "item.mc_lb.master_sword": "§c宗师强者剑",
-  "tooltip.mc_lb.mastersword": "§7看起来像是星辰之怒的兄弟"
+  "tooltip.mc_lb.mastersword": "§7看起来像是星辰之怒的兄弟",
+  "block.mc_lb.wuge_luckyblock": "五歌幸运方块",
+  "item.mc_lb.wuge_helmet": "五歌的头",
+  "item.mc_lb.wuge_chestplate": "五歌的衣服",
+  "item.mc_lb.wuge_leggings": "五歌的裙子",
+  "item.mc_lb.wuge_boots": "五歌的袜子",
+  "tooltip.mc_lb.wuge_boots": "§7这个不可以哦~",
+  "block.mc_lb.dachengzi_luckyblock": "大橙子幸运方块",
+  "item.mc_lb.dachengzi_helmet": "大橙子的头",
+  "item.mc_lb.dachengzi_chestplate": "大橙子的衣服",
+  "item.mc_lb.dachengzi_leggings": "§7大橙子的裤子",
+  "item.mc_lb.dachengzi_boots": "大橙子的拖鞋"
 }

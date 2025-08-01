@@ -42,6 +42,10 @@ public class ModBlocks {
             ()->new DiGeLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
     public static final RegistryObject<Block> UNCLEREDLUCKYBLOCK = registerBlock("uncle_red_luckyblock",
             ()->new UncleRedLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> WUGELUCKYBLOCK = registerBlock("wuge_luckyblock",
+            ()->new WuGeLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> DACHENGZILUCKYBLOCK = registerBlock("dachengzi_luckyblock",
+            ()->new DaChengZiLuckyBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).noOcclusion()));
 
 
 

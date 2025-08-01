@@ -1,6 +1,7 @@
 package com.cu6.mc_lb.item;
 
 import com.cu6.mc_lb.MCLB;
+import com.cu6.mc_lb.item.armor.WugeBoots;
 import com.cu6.mc_lb.item.tools.*;
 import com.cu6.mc_lb.sound.ModSounds;
 import net.minecraft.world.item.*;
@@ -49,6 +50,8 @@ public class ModItems {
             ()-> new ArmorItem(ModArmorMaterials.MOON_BOOS,ArmorItem.Type.LEGGINGS,new Item.Properties()));
     public static final RegistryObject<Item> MOON_BOOS_BOOTS = ITEMS.register("moon_boos_boots",
             ()-> new ArmorItem(ModArmorMaterials.MOON_BOOS,ArmorItem.Type.BOOTS,new Item.Properties()));
+    public static final RegistryObject<Item> BOOS_SWORD = ITEMS.register("boos_sword",
+            ()-> new SwordItem(Tiers.DIAMOND, 4,-1,new Item.Properties()));
     //xiaoben小本
     public static final RegistryObject<Item> XIAOBEN_HELMET = ITEMS.register("xiaoben_helmet",
             ()-> new ArmorItem(ModArmorMaterials.XIAOBEN,ArmorItem.Type.HELMET,new Item.Properties()));
@@ -97,7 +100,7 @@ public class ModItems {
             () -> new NoOffHandBow(new Item.Properties().durability(384)));
     public static final RegistryObject<Item> CAT_SWORD = ITEMS.register("cat_sword",
             () -> new CatSword(Tiers.DIAMOND, 3,-2.4F,new Item.Properties().durability(1561)));
-    //dige
+    //dige迪哥
     public static final RegistryObject<Item> DIGE_HELMET = ITEMS.register("dige_helmet",
             ()-> new ArmorItem(ModArmorMaterials.DIGE,ArmorItem.Type.HELMET,new Item.Properties()));
     public static final RegistryObject<Item> DIGE_CHESTPLATE = ITEMS.register("dige_chestplate",
@@ -106,7 +109,7 @@ public class ModItems {
             ()-> new ArmorItem(ModArmorMaterials.DIGE,ArmorItem.Type.LEGGINGS,new Item.Properties()));
     public static final RegistryObject<Item> DIGE_BOOTS = ITEMS.register("dige_boots",
             ()-> new ArmorItem(ModArmorMaterials.DIGE,ArmorItem.Type.BOOTS,new Item.Properties()));
-    //uncle_red
+    //uncle_red红叔
     public static final RegistryObject<Item> UNCLE_RED_HELMET = ITEMS.register("uncle_red_helmet",
             ()-> new ArmorItem(ModArmorMaterials.UNCLE_RED,ArmorItem.Type.HELMET,new Item.Properties()));
     public static final RegistryObject<Item> UNCLE_RED_CHESTPLATE = ITEMS.register("uncle_red_chestplate",
@@ -117,8 +120,24 @@ public class ModItems {
             ()-> new ArmorItem(ModArmorMaterials.UNCLE_RED,ArmorItem.Type.BOOTS,new Item.Properties()));
     public static final RegistryObject<Item> MASTER_SWORD = ITEMS.register("master_sword",
             ()-> new MasterSword(Tiers.NETHERITE,5,-2.2F,new Item.Properties().durability(2000)));
-
-
+    //wuge五歌
+    public static final RegistryObject<Item> WUGE_HELMET = ITEMS.register("wuge_helmet",
+            ()-> new ArmorItem(ModArmorMaterials.WUGE,ArmorItem.Type.HELMET,new Item.Properties()));
+    public static final RegistryObject<Item> WUGE_CHESTPLATE = ITEMS.register("wuge_chestplate",
+            ()-> new ArmorItem(ModArmorMaterials.WUGE,ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+    public static final RegistryObject<Item> WUGE_LEGGINGS = ITEMS.register("wuge_leggings",
+            ()-> new ArmorItem(ModArmorMaterials.WUGE,ArmorItem.Type.LEGGINGS,new Item.Properties()));
+    public static final RegistryObject<Item> WUGE_BOOTS = ITEMS.register("wuge_boots",
+            ()-> new WugeBoots(ModArmorMaterials.WUGE,ArmorItem.Type.BOOTS,new Item.Properties()));
+    //dachengzi大橙子
+    public static final RegistryObject<Item> DACHENGZI_HELMET = ITEMS.register("dachengzi_helmet",
+            ()-> new ArmorItem(ModArmorMaterials.DACHENGZI,ArmorItem.Type.HELMET,new Item.Properties()));
+    public static final RegistryObject<Item> DACHENGZI_CHESTPLATE = ITEMS.register("dachengzi_chestplate",
+            ()-> new ArmorItem(ModArmorMaterials.DACHENGZI,ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+    public static final RegistryObject<Item> DACHENGZI_LEGGINGS = ITEMS.register("dachengzi_leggings",
+            ()-> new ArmorItem(ModArmorMaterials.DACHENGZI,ArmorItem.Type.LEGGINGS,new Item.Properties()));
+    public static final RegistryObject<Item> DACHENGZI_BOOTS = ITEMS.register("dachengzi_boots",
+            ()-> new ArmorItem(ModArmorMaterials.DACHENGZI,ArmorItem.Type.BOOTS,new Item.Properties()));
 
 
     public static void register(IEventBus eventBus){

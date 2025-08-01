@@ -1,11 +1,15 @@
 package com.cu6.mc_lb;
 
 import com.cu6.mc_lb.block.ModBlocks;
+import com.cu6.mc_lb.entity.ModEntities;
+import com.cu6.mc_lb.entity.client.MCPlayerRenderer;
 import com.cu6.mc_lb.item.ModCreativeTabs;
 import com.cu6.mc_lb.item.ModItems;
 import com.cu6.mc_lb.sound.ModSounds;
 import com.cu6.mc_lb.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -34,6 +38,7 @@ public class MCLB
         ModCreativeTabs.register(modEventBus);
         ModVillagers.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -63,6 +68,7 @@ public class MCLB
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(ModEntities.MCPLAYER.get(), MCPlayerRenderer::new);
         }
     }
 }
