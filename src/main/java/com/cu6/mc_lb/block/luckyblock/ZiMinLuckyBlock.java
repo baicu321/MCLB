@@ -1,6 +1,7 @@
 package com.cu6.mc_lb.block.luckyblock;
 
 import com.cu6.mc_lb.block.LuckyBlock;
+import com.cu6.mc_lb.entity.ModEntities;
 import com.cu6.mc_lb.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -39,7 +40,7 @@ public class ZiMinLuckyBlock extends LuckyBlock {
             level.destroyBlock(pos, false);
             level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT,
                     SoundSource.BLOCKS, 1.0F, 1.0F);
-            int luck = random.nextInt(5);
+            int luck = random.nextInt(6);
             switch (luck) {
                 case 0:
                     spawnItem(serverLevel, pos, new ItemStack(ModItems.ZI_MIN_HELMET.get(), random.nextInt(1) + 1));
@@ -59,6 +60,9 @@ public class ZiMinLuckyBlock extends LuckyBlock {
                     break;
                 case 4:
                     spawnItem(serverLevel,pos,new ItemStack(ModItems.HIT_MAYI.get(), random.nextInt(1)+1));
+                    break;
+                case 5:
+                    spawnEntity(serverLevel,pos, ModEntities.ZI_MIN.get(),1,1,null);
                     break;
             }
         }

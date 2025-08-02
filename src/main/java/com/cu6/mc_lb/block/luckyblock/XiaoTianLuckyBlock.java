@@ -2,6 +2,7 @@ package com.cu6.mc_lb.block.luckyblock;
 
 import com.cu6.mc_lb.MCLB;
 import com.cu6.mc_lb.block.LuckyBlock;
+import com.cu6.mc_lb.entity.ModEntities;
 import com.cu6.mc_lb.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -43,7 +44,7 @@ public class XiaoTianLuckyBlock extends LuckyBlock {
             level.destroyBlock(pos, false);
             level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT,
                     SoundSource.BLOCKS, 1.0F, 1.0F);
-            int luck = random.nextInt(4);
+            int luck = random.nextInt(5);
             switch (luck) {
                 case 0:
                     spawnItem(serverLevel, pos, new ItemStack(Items.DIAMOND, random.nextInt(10) + 1));
@@ -60,6 +61,9 @@ public class XiaoTianLuckyBlock extends LuckyBlock {
                     break;
                 case 3:
                     spawnItem(serverLevel, pos, new ItemStack(ModItems.MISSILE.get(), random.nextInt(1) + 1));
+                    break;
+                case 4:
+                    spawnEntity(serverLevel,pos, ModEntities.XIAOTIAN.get(),1,1, null);
                     break;
             }
         }

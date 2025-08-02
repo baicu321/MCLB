@@ -1,5 +1,7 @@
 package com.cu6.mc_lb.entity.client;
 
+import com.cu6.mc_lb.entity.animations.ModAnimationDefinitions;
+import com.cu6.mc_lb.entity.custom.MCPlayerEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.HierarchicalModel;
@@ -52,7 +54,10 @@ public class MCPlayerModel<T extends Entity> extends HierarchicalModel<T> {
 
 	@Override
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+			this.root().getAllParts().forEach(ModelPart::resetPose);
 
+			this.animateWalk(ModAnimationDefinitions.WALK,limbSwing,limbSwingAmount,2f,1f);
+			this.animate(((MCPlayerEntity) entity).idleAnimationState,ModAnimationDefinitions.IDLE,ageInTicks,1f);
 	}
 
 	@Override

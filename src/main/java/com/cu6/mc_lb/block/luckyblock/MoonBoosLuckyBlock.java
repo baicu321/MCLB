@@ -2,6 +2,7 @@ package com.cu6.mc_lb.block.luckyblock;
 
 import com.cu6.mc_lb.MCLB;
 import com.cu6.mc_lb.block.LuckyBlock;
+import com.cu6.mc_lb.entity.ModEntities;
 import com.cu6.mc_lb.item.ModItems;
 import net.minecraft.core.BlockPos;
 
@@ -45,7 +46,7 @@ public class MoonBoosLuckyBlock extends LuckyBlock {
             level.destroyBlock(pos, false);
             level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT,
                     SoundSource.BLOCKS, 1.0F, 1.0F);
-            int luck = random.nextInt(7);
+            int luck = random.nextInt(8);
             switch (luck) {
                 case 0:
                     placeStructure(serverLevel,pos,new ResourceLocation(MCLB.MOD_ID,"music_star"), Rotation.getRandom(random));
@@ -85,6 +86,9 @@ public class MoonBoosLuckyBlock extends LuckyBlock {
                     break;
                 case 6:
                     spawnItem(serverLevel, pos, new ItemStack(ModItems.BOOS_SWORD.get(), random.nextInt(1) + 1));
+                    break;
+                case 7:
+                    spawnEntity(serverLevel,pos, ModEntities.MOONBOOS.get(),1,1,null);
                     break;
             }
         }

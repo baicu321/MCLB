@@ -29,11 +29,11 @@ public enum ModArmorMaterials implements ArmorMaterial {
     DIGE("dige",999,new int[]{3,8,6,3},25,
             SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.DIGELUCKYBLOCK.get())),
     UNCLE_RED("uncle_red",999,new int[]{3,8,6,3},25,
-            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.LUCKYBLOCK.get())),
+            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.UNCLEREDLUCKYBLOCK.get())),
     WUGE("wuge",999,new int[]{3,8,6,3},25,
-            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.LUCKYBLOCK.get())),
+            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.WUGELUCKYBLOCK.get())),
     DACHENGZI("dachengzi",999,new int[]{3,8,6,3},25,
-            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.LUCKYBLOCK.get()));
+            SoundEvents.ARMOR_EQUIP_GOLD,1f,1f,()->Ingredient.of(ModBlocks.DACHENGZILUCKYBLOCK.get()));
 
 
 

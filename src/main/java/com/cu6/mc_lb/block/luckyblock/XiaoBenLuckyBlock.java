@@ -2,6 +2,7 @@ package com.cu6.mc_lb.block.luckyblock;
 
 import com.cu6.mc_lb.MCLB;
 import com.cu6.mc_lb.block.LuckyBlock;
+import com.cu6.mc_lb.entity.ModEntities;
 import com.cu6.mc_lb.item.ModItems;
 import com.cu6.mc_lb.util.DelayedMessageSystem;
 import com.cu6.mc_lb.util.LoveParticleHandler;
@@ -49,7 +50,7 @@ public class XiaoBenLuckyBlock extends LuckyBlock {
             level.destroyBlock(pos, false);
             level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT,
                     SoundSource.BLOCKS, 1.0F, 1.0F);
-            int luck = random.nextInt(4);
+            int luck = random.nextInt(5);
             switch (luck) {
                 case 0:
                     placeStructure(serverLevel,pos,new ResourceLocation(MCLB.MOD_ID,"xiaoben_end"), Rotation.getRandom(random));
@@ -89,6 +90,9 @@ public class XiaoBenLuckyBlock extends LuckyBlock {
                     break;
                 case 3:
                     spawnItem(serverLevel, pos, new ItemStack(ModItems.CHERRY_RADISH.get(), random.nextInt(2) + 1));
+                    break;
+                case 4:
+                    spawnEntity(serverLevel,pos, ModEntities.XIAOBEN.get(),1,1,null);
                     break;
             }
         }

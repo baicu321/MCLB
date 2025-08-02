@@ -4,6 +4,7 @@ import com.cu6.mc_lb.MCLB;
 import com.cu6.mc_lb.item.armor.WugeBoots;
 import com.cu6.mc_lb.item.tools.*;
 import com.cu6.mc_lb.sound.ModSounds;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -129,6 +130,8 @@ public class ModItems {
             ()-> new ArmorItem(ModArmorMaterials.WUGE,ArmorItem.Type.LEGGINGS,new Item.Properties()));
     public static final RegistryObject<Item> WUGE_BOOTS = ITEMS.register("wuge_boots",
             ()-> new WugeBoots(ModArmorMaterials.WUGE,ArmorItem.Type.BOOTS,new Item.Properties()));
+    public static final RegistryObject<Item> MIXIAN = ITEMS.register("mixian",
+            ()-> new Item(new Item.Properties().food(ModFoods.MIXIAN)));
     //dachengzi大橙子
     public static final RegistryObject<Item> DACHENGZI_HELMET = ITEMS.register("dachengzi_helmet",
             ()-> new ArmorItem(ModArmorMaterials.DACHENGZI,ArmorItem.Type.HELMET,new Item.Properties()));

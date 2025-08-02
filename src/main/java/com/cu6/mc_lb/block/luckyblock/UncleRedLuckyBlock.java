@@ -1,6 +1,7 @@
 package com.cu6.mc_lb.block.luckyblock;
 
 import com.cu6.mc_lb.block.LuckyBlock;
+import com.cu6.mc_lb.entity.ModEntities;
 import com.cu6.mc_lb.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -37,7 +38,7 @@ public class UncleRedLuckyBlock extends LuckyBlock {
             level.destroyBlock(pos, false);
             level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT,
                     SoundSource.BLOCKS, 1.0F, 1.0F);
-            int luck = random.nextInt(3);
+            int luck = random.nextInt(4);
             switch (luck) {
                 case 0:
                     spawnItem(serverLevel, pos, new ItemStack(ModItems.UNCLE_RED_HELMET.get(), random.nextInt(1) + 1));
@@ -50,6 +51,9 @@ public class UncleRedLuckyBlock extends LuckyBlock {
                     break;
                 case 2:
                     spawnEntity(serverLevel,pos, EntityType.GUARDIAN,2,5,null);
+                    break;
+                case 3:
+                    spawnEntity(serverLevel,pos, ModEntities.UNCLE_RED.get(),1,1, null);
                     break;
 
             }

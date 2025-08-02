@@ -1,6 +1,7 @@
 package com.cu6.mc_lb.block.luckyblock;
 
 import com.cu6.mc_lb.block.LuckyBlock;
+import com.cu6.mc_lb.entity.ModEntities;
 import com.cu6.mc_lb.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
@@ -47,7 +48,7 @@ public class NorLuckyBlock extends LuckyBlock {
             level.destroyBlock(pos, false);
             level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT,
                     SoundSource.BLOCKS, 1.0F, 1.0F);
-            int luck = random.nextInt(6);
+            int luck = random.nextInt(7);
             switch (luck) {
                 case 0:
                     spawnItem(serverLevel, pos, new ItemStack(ModItems.NOR_HELMET.get(), random.nextInt(1) + 1));
@@ -69,6 +70,9 @@ public class NorLuckyBlock extends LuckyBlock {
                     break;
                 case 5:
                     spawnItem(serverLevel, pos, new ItemStack(ModItems.CAT_SWORD.get(), random.nextInt(1) + 1));
+                    break;
+                case 6:
+                    spawnEntity(serverLevel,pos, ModEntities.NOR.get(),1,1, null);
                     break;
             }
         }

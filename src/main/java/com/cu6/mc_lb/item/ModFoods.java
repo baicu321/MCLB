@@ -19,4 +19,9 @@ public class ModFoods {
             .nutrition(0)
             .saturationMod(0)
             .build();
+    public static final FoodProperties MIXIAN = new FoodProperties.Builder()
+            .alwaysEat()
+            .nutrition(8)
+            .saturationMod(20)
+            .build();
 }

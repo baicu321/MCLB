@@ -93,6 +93,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.WUGE_CHESTPLATE.get());
                         output.accept(ModItems.WUGE_LEGGINGS.get());
                         output.accept(ModItems.WUGE_BOOTS.get());
+                        output.accept(ModItems.MIXIAN.get());
                         //dachengzi
                         output.accept(ModBlocks.DACHENGZILUCKYBLOCK.get());
                         output.accept(ModItems.DACHENGZI_HELMET.get());

@@ -3,6 +3,7 @@ package com.cu6.mc_lb.block.luckyblock;
 import com.cu6.mc_lb.MCLB;
 import com.cu6.mc_lb.block.LuckyBlock;
 import com.cu6.mc_lb.block.ModBlocks;
+import com.cu6.mc_lb.entity.ModEntities;
 import com.cu6.mc_lb.item.ModItems;
 import com.cu6.mc_lb.util.DelayedMessageSystem;
 import net.minecraft.core.BlockPos;
@@ -15,6 +16,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -42,7 +44,7 @@ public class DiGeLuckyBlock extends LuckyBlock {
             level.destroyBlock(pos, false);
             level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT,
                     SoundSource.BLOCKS, 1.0F, 1.0F);
-            int luck = random.nextInt(3);
+            int luck = random.nextInt(4);
             switch (luck) {
                 case 0:
                     spawnItem(serverLevel, pos, new ItemStack(ModItems.DIGE_HELMET.get(), random.nextInt(1) + 1));
@@ -60,6 +62,9 @@ public class DiGeLuckyBlock extends LuckyBlock {
                     break;
                 case 2:
                     spawnItem(serverLevel, pos, new ItemStack(Items.STONE_HOE, random.nextInt(10) + 1));
+                    break;
+                case 3:
+                    spawnEntity(serverLevel,pos, ModEntities.DIGE.get(),1,1,null);
                     break;
             }
         }

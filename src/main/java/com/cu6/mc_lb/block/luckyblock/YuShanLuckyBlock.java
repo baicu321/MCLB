@@ -2,6 +2,7 @@ package com.cu6.mc_lb.block.luckyblock;
 
 import com.cu6.mc_lb.MCLB;
 import com.cu6.mc_lb.block.LuckyBlock;
+import com.cu6.mc_lb.entity.ModEntities;
 import com.cu6.mc_lb.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -44,7 +45,7 @@ public class YuShanLuckyBlock extends LuckyBlock {
             level.destroyBlock(pos, false);
             level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT,
                     SoundSource.BLOCKS, 1.0F, 1.0F);
-            int luck = random.nextInt(13);
+            int luck = random.nextInt(14);
             switch (luck) {
                 case 0:
                     spawnItem(serverLevel, pos, new ItemStack(ModItems.YUSHAN_HELMET.get(), random.nextInt(1) + 1));
@@ -87,6 +88,9 @@ public class YuShanLuckyBlock extends LuckyBlock {
                     break;
                 case 12:
                     placeStructure(serverLevel,pos,new ResourceLocation(MCLB.MOD_ID,"jail"), Rotation.getRandom(random));
+                    break;
+                case 13:
+                    spawnEntity(serverLevel,pos, ModEntities.YUSHAN.get(),1,1, null);
                     break;
             }
         }
