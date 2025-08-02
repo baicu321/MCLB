@@ -50,7 +50,7 @@ public class WuGeLuckyBlock extends LuckyBlock {
                     spawnEntity(serverLevel,pos, ModEntities.WUGE.get(),1,1, null);
                     break;
                 case 2:
-                    placeStructure(serverLevel,pos,new ResourceLocation(MCLB.MOD_ID,"superheart"), Rotation.getRandom(random));
+                    placeStructure(serverLevel,pos,new ResourceLocation(MCLB.MOD_ID,"superheartd"), Rotation.getRandom(random));
                     break;
             }
         }
