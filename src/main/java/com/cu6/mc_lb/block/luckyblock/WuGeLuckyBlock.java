@@ -38,7 +38,7 @@ public class WuGeLuckyBlock extends LuckyBlock {
             level.destroyBlock(pos, false);
             level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT,
                     SoundSource.BLOCKS, 1.0F, 1.0F);
-            int luck = random.nextInt(2);
+            int luck = random.nextInt(3);
             switch (luck) {
                 case 0:
                     spawnItem(serverLevel, pos, new ItemStack(ModItems.WUGE_HELMET.get(), random.nextInt(1) + 1));
